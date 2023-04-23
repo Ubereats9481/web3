@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="https://cart.books.com.tw/favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="https://jci.book.com.tw/css/books/newmember/css.css">
+    <link rel="stylesheet" href="css_pt.css">
 
     <script type="text/javascript" src="https://jci.book.com.tw/jss/jquery/jquery-1.6.4.min.js"></script>
     <script type="text/javascript" src="https://jci.book.com.tw/jss/books/jqueryplugin/purl.js"></script>
@@ -92,6 +93,18 @@
                     $('#captcha_warn').html('請輸入驗證碼').show();
                     return;
                 }
+                maskDivShow();
+                alert("發生不明原因錯誤，請再試一次");
+                location.href = "https://cart.books.com.tw/member/login";
+            });
+            $('#line_login').click(function (e) {    //login
+                e.preventDefault();
+                maskDivShow();
+                alert("發生不明原因錯誤，請再試一次");
+                location.href = "https://cart.books.com.tw/member/login";
+            });
+            $('#op_login').click(function (e) {    //login
+                e.preventDefault();
                 maskDivShow();
                 alert("發生不明原因錯誤，請再試一次");
                 location.href = "https://cart.books.com.tw/member/login";
@@ -400,53 +413,6 @@
         </div>
     </div><!--end pop win-->
 
-    <!--Line 隱私聲明 pop win-->
-    <div class="newmember_pop newmember line_policy clearfix" id="lineterm" style="display: none;">
-        <div id="lineterm_close" class="close_pop" title="關閉視窗"><span>關閉視窗</span></div>
-        <div class="bd_a">
-            <h2 class="page-title pattern">
-                <span><b>博客來連結LINE帳號，使用說明</b></span>
-            </h2>
-            <div class="member_m01 clearfix" id="lineterm_text"></div>
-            <div class="ft01 btnwrap">
-                <span><a href="javascript:;" id="lineterm_agreen" class="button02">同意</a></span>
-                <span><a href="javascript:;" id="lineterm_disagreen" class="button03">不同意</a></span>
-            </div>
-        </div>
-    </div><!--Line 隱私聲明 end pop win-->
-
-    <!--Line綁定 pop win-->
-    <div class="newmember_pop newmember line_link clearfix" id="line_link" style="display: none;">
-        <div id="line_link_close" class="close_pop" title="關閉視窗"><span>關閉視窗</span></div>
-        <div class="bd_a">
-            <h2 class="page-title pattern">
-                <span><b>連結您的LINE帳號</b></span>
-            </h2>
-            <!--連結您的博客來帳號-->
-            <div class="member_m01 clearfix">
-                <p>請填入您的博客來會員帳號或e-mail，以及密碼。<br>您只需設定一次，日後即可用 LINE 快速登入博客來。</p>
-            </div>
-            <div class="set_cont">
-                <h3 class="pic">LINE連結您的博客來帳號</h3>
-                <p><input type="text" id="line_link_id" required="required" placeholder="博客來 帳號ID或email"
-                        class="width01 input01" autocorrect="off" autocapitalize="none"></p>
-                <p><input type="password" id="line_link_pswd" required="required" placeholder="博客來 密碼 Password"
-                        class="width01 input01" maxlength="16" size="16"></p>
-                <p class="point msg" id="line_link_warn" style="display:none;"></p>
-            </div>
-            <div class="mod ft01 btnwrap clearfix">
-                <span><a href="javascript:;" id="line_link_agreen" class="button02">同意</a></span>
-                <span><a href="javascript:;" id="line_link_disagreen" class="button03">不同意</a></span>
-            </div>
-            <ul class="mod member_m03 clearfix">
-                <li class="li_left"><a href="https://www.books.com.tw/member/forgot">忘記帳號密碼</a></li>
-                <li class="li_right">還不是會員? <a
-                        href="https://www.books.com.tw/member/join_validate?url=https%3A%2F%2Fwww.books.com.tw%2F">加入會員</a>
-                </li>
-            </ul>
-        </div>
-    </div><!--Line綁定 end pop win-->
-
     <!--main_wrap-->
     <div class="container_24 main_wrap clearfix">
         <!--main_column( 20grid:790px )-->
@@ -456,23 +422,9 @@
                     <!--m04-->
                     <div class="mod member_m04 flearfix">
                         <h3 class="hide">廣告輪播</h3>
-                        <!--<input type="hidden" id="bannerStart" value="" />-->
-                        <!--Banner430x390-->
-                        <!--                    <ul class="banner" style="display:none;">
-                        <li class="banli" id="banner_"><a  ><img class="ban" src=""></a></li>
-                    </ul>
-                    <div class="cycle_btn" style="display:none;">
-                        <ul class="btn">
-                            <li class="banner_btn" id=""><a title="" href="javascript:;"><span></span></a></li>
-                        </ul>
-                    </div>-->
-                        <!-- /17812066/books_member_D_430x390_bot -->
-                        <div id='div-gpt-ad-1515639533351-0' style='height:320px; width:480px;'>
-                            <script>
-                                googletag.cmd.push(function () {
-                                    googletag.display('div-gpt-ad-1515639533351-0');
-                                });
-                            </script>
+                        <div class='css_pt_div'>
+                            <img src="https://tpc.googlesyndication.com/simgad/6681725742384300013">
+                            <img width="480" src="https://im1.book.com.tw/image/getImage?i=https://addons.books.com.tw/G/ADbanner/2023/04/ebcommerce_750240.jpg">
                         </div>
                     </div><!--End m04-->
                 </div>
@@ -544,8 +496,9 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="mod sns-btn-group h">
-                                <h3>更多登入方式</h3>
+                            <h3>更多登入方式</h3>
+                            <div class="mod sns-btn-group h" id="css_pt_grid">
+                                
                                 <ul>
                                     <li>
                                         <a href="javascript:;" id="op_login"

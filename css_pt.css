@@ -1,0 +1,13 @@
+.css_pt_div {
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#css_pt_grid{
+    display: grid;
+    grid-template-rows: 40px 40px 40px;
+    grid-template-columns: 246px 246px 246px;
+    grid-gap: 5px;
+}
